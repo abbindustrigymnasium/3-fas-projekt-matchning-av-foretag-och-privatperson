@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="profile.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to Matchning.se</h1>
+    <p>Manage your information and settings here.</p>
+  </header>
+  <main class="profile-container">
+    <section class="profile-sidebar">
+      <div class="profile-picture">
+        <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="Profile Picture">
+      </div>
+      <h2 class="profile-name">John Doe</h2>
+      <p class="profile-email">johndoe@example.com</p>
+      <button class="btn logout-btn" onclick="logout()">Log Out</button>
+    </section>
+    <section class="profile-details">
+      <h3>Profile Settings</h3>
+      <form class="profile-form">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+          <label for="education">Education</label>
+          <input type="text" id="education" placeholder="Education">
+        </div>
+        </div>
+        <button type="submit" class="btn save-btn">Save Profile</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

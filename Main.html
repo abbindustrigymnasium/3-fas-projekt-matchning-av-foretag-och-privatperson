@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Matchning.se</title>
+  <link rel="stylesheet" href="signup.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>VÄLKOMMEN TILL MATCHNING.SE</h1>
+  </header>
+    <!-- Login and Sign-Up Buttons -->
+  <div class="button">
+    <button id="login" onclick="toggleModal('id02', 'open')">Login</button>
+    <button id="signin" onclick="toggleModal('id01', 'open')">Sign Up</button>
+  </div>
+
+  <!-- Sign-Up Modal -->
+  <div id="id01" class="modal">
+    <span onclick="toggleModal('id01', 'close')" class="close" title="Close Modal">x</span>
+    <form class="modal-content" onsubmit="handleSignUp(event)">
+      <div class="container">
+        <h2>Sign Up</h2>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" onclick="toggleModal('id01', 'close')" class="cancelbtn">Cancel</button>
+          <button type="submit" class="submit">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="id02" class="modal">
+    <span onclick="toggleModal('id02', 'close')" class="close" title="Close Modal">x</span>
+    <form class="modal-content" onsubmit="handleLogin(event)">
+      <div class="container">
+        <h2>Login</h2>
+        <p>Please enter your credentials to log in.</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+
+        <div class="clearfix">
+          <button type="button" onclick="toggleModal('id02', 'close')" class="cancelbtn">Cancel</button>
+          <button type="submit" class="submit">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
