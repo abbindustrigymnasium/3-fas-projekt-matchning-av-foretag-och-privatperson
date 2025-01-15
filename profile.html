@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
+  <title>Edit Profile</title>
   <link rel="stylesheet" href="profile.css">
   <script src="script.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1>Welcome to Matchning.se</h1>
-    <p>Manage your information and settings here.</p>
+    <h1>Edit Profile</h1>
   </header>
   <main class="profile-container">
     <section class="profile-sidebar">
@@ -23,7 +22,7 @@
     </section>
     <section class="profile-details">
       <h3>Profile Settings</h3>
-      <form class="profile-form">
+      <form class="profile-form" onsubmit="handleSaveProfile(event)">
         <div class="form-group">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" placeholder="First Name">
@@ -44,10 +43,10 @@
           <label for="education">Education</label>
           <input type="text" id="education" placeholder="Education">
         </div>
-        </div>
         <button type="submit" class="btn save-btn">Save Profile</button>
       </form>
     </section>
   </main>
 </body>
 </html>
+
