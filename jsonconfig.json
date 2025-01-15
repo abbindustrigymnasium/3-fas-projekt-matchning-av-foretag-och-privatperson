@@ -1,0 +1,6 @@
+{
+    "cors": {
+        "enabled": true,
+        "allowedOrigins": ["http://localhost:3000"]
+    }
+}

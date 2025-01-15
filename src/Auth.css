@@ -1,0 +1,117 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fb;
+    flex-direction: column;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 1rem; /* Increase padding for larger fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+.auth-form button {
+    width: 100%; /* Make button stretch to full width */
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #0056b3;
+}
+
+.logged-in-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logged-in-container input[type="text"] {
+    width: 100%;
+    padding: 1rem; /* Adjust padding for larger height */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.logged-in-container input[type="file"] {
+    margin-top: 1rem;
+    align-self: center; /* Center the upload button */
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.auth-container .toggle-mode-btn {
+    margin-top: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.auth-container .toggle-mode-btn:hover {
+    background-color: #5a6268;
+}
+
+.auth-container .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
