@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    Testa skit
+</head>
+
+<script>
+    // Main dictionary containing lists
+const mainDict = {
+    'name': "Firstname Lastname",
+    'qualifications': ["matte1c", "matte2c", "matte3c"],
+    'interests': ["Programmering", "Teknik"]
+};
+
+// Requirements list specifying the criteria for the first element
+const comparisondict = {
+    example1: {
+        company: "company name1",
+        requirements: ["matte1c", "matte2c"],
+        areas: ["Programmering", "Teknik", "hej"]
+    },
+    example2: {
+        company: "company name2",
+        requirements: ["matte1c"],
+        areas: ["Programmering", "Teknik", "test"]
+    },
+    example3: {
+        company: "company name3",
+        requirements: ["matte1c"],
+        areas: ["Programmering", "Teknik", "firebase"]
+    },
+    example4: {
+        company: "company name4",
+        requirements: ["matte1c"],
+        areas: ["Programmering", "Teknik"]
+    }
+};
+
+// Matching dictionary for percentage calculation
+const matchingDict = {
+    1: 0.5,
+    2: 0.3,
+    3: 0.2
+};
+
+function filterDictionaries(mainDict, comparisonDict) {
+    const result = {};
+
+    // Get the second entry of the comparison dictionary
+    const comparisonKey = Object.keys(comparisonDict)[1];
+    const comparisonList = comparisonDict[comparisonKey];
+
+    // Iterate through each dictionary in the main dictionary
+    for (const key in mainDict) {
+        if (mainDict.hasOwnProperty(key)) {
+            const currentDict = mainDict[key];
+            const currentKey = Object.keys(currentDict)[1];
+            const currentList = currentDict[currentKey];
+
+            // Check if all elements in the current list are in the comparison list
+            const allMatch = currentList.every(item => comparisonList.includes(item));
+
+            // If all elements match, save the current dictionary
+            if (allMatch) {
+                result[key] = currentDict;
+            }
+        }
+    }
+
+    return result;
+}
+
+// Function to check if the first element matches all requirements
+function matchesFirstElement(entry, requirements) {
+    return (req => entry.includes(req));
+}
+
+// Function to calculate match percentage for the rest of the list
+function calculateMatchPercentage(entry, matchingDict) {
+    let totalWeight = 0;
+    let matchScore = 0;
+
+    for (const element of entry) {
+        if (matchingDict[element] !== undefined) {
+            totalWeight += matchingDict[element];
+            matchScore += matchingDict[element];
+        }
+    }
+
+    return (matchScore / totalWeight) * 100;
+}
+
+function determineifqualified(comparisondict, mainDict){
+    const qualified = []
+    for (let values in comparisondict){
+        console.log(values)
+        let array = comparisondict[values].requirements
+        let myskills = mainDict['qualifications'];
+        let string = JSON.stringify(myskills);
+        console.log(array);
+        console.log(myskills);
+        let i = 0;
+        let arraylength = 0;
+        for (a in array){
+            arraylength += 1
+            console.log(a)
+            if (string.includes(array[a])){
+                i += 1
+                console.log(string)
+                console.log("Jag är ett fucking geni ge mig nobelpris")
+        }
+        else{
+            console.log("damn nåt e fel")
+        }
+        
+        }
+        if (i == arraylength){
+                qualified.push(values)
+            }
+        
+    }
+        console.log("qualified:", qualified)
+        return qualified
+}
+
+let sortedlist = determineifqualified(comparisondict, mainDict);
+
+function calculatematch(sortedlist, mainDict, comparisondict){
+    
+}
+
+// Function to filter and sort the main dictionary
+function filterAndSortEntries(mainDict, comparisondict, matchingDict) {
+    const filteredEntries = [];
+
+    for (const [qualifications, value] of Object.entries(mainDict)) {
+        if (matchesFirstElement(value, comparisondict)) {
+            const matchPercentage = calculateMatchPercentage(value, matchingDict);
+            filteredEntries.push({ qualifications, value, matchPercentage });
+        }
+    }
+
+    // Sort by match percentage in descending order
+    filteredEntries.sort((a, b) => b.matchPercentage - a.matchPercentage);
+
+    // Convert back to a dictionary format
+    const sortedDict = {};
+    for (const entry of filteredEntries) {
+        sortedDict[entry.key] = entry.value;
+    }
+
+    return sortedDict;
+}
+
+// Get the filtered and sorted dictionary
+const sortedDict = filterAndSortEntries(mainDict, comparisondict, matchingDict);
+//console.log(sortedDict);
+</script>
