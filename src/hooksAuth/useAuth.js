@@ -9,6 +9,8 @@ export default function useAuth() {
     const [recordId, setRecordId] = useState(null);
     const [authError, setAuthError] = useState("");
 
+    
+
     const login = async (email, password) => {
         try {
             setAuthError("");
@@ -45,8 +47,12 @@ export default function useAuth() {
         setIsLoggedIn(false);
         setRecordId(null);
         setUserName("");
-        navigate("/");
-    };
+        
+        // Delay the navigation slightly to ensure the logout state is updated
+        setTimeout(() => {
+            navigate("/");  // Redirect to the home page after clearing auth
+        }, 100);  // Small delay (optional, but may help with routing)
+    };    
 
     return { isLoggedIn, userName, recordId, authError, login, signUp, logout };
 };
