@@ -1,3 +1,8 @@
+# Code file
+
+The code files are under "src"
+"hooks" are were some components are when using functions like log in/out
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
