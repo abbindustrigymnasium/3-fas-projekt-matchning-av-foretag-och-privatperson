@@ -1,6 +1,7 @@
 # Code file
 
 The code files are under "src"
+"hooks" are were some components are when using functions like log in/out
 
 # Getting Started with Create React App
 
