@@ -1,39 +1,39 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
     background-color: #f4f7fb; /* Light background color */
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    text-align: center; /* Center-align text */
+    font-family: Arial, sans-serif; /* Set the font family */
+    padding: 20px; /* Add padding inside the container */
 }
 
 .home-container h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 2.5rem; /* Set font size for heading */
+    color: #333; /* Set font color to dark gray */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
 .home-container p {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Set font size for paragraph */
+    color: #555; /* Set font color to medium gray */
+    margin-bottom: 20px; /* Space below the paragraph */
 }
 
 .home-description p {
-    font-size: 1.2rem;
-    color: #777;
+    font-size: 1.2rem; /* Set smaller font size for description */
+    color: #777; /* Set font color to lighter gray */
 }
 
 .home-container a {
-    text-decoration: none;
-    color: #1a73e8; /* Link color */
-    font-weight: bold;
-    margin-top: 20px;
+    text-decoration: none; /* Remove underline from links */
+    color: #1a73e8; /* Set link color to blue */
+    font-weight: bold; /* Make the link bold */
+    margin-top: 20px; /* Space above the link */
 }
 
 .home-container a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }

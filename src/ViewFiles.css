@@ -4,102 +4,104 @@ body {
     margin: 0%;
     padding: 10%;
     background-color: #1a1a2e; /* Darker blue */
-    background-image: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: var(--white);
-    line-height: 1.6;
+    background-image: linear-gradient(135deg, #1a1a2e, #16213e); /* Gradient background */
+    color: var(--white); /* Text color */
+    line-height: 1.6; /* Line height for better readability */
 }
 
 /* View Files Container */
 .view-files-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Slightly translucent */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Restricts container width */
+    margin: 50px auto; /* Centers container with margin on top */
+    padding: 20px; /* Adds padding inside container */
+    background: rgba(255, 255, 255, 0.1); /* Slightly translucent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     box-sizing: border-box; /* Ensures padding does not affect width */
 }
 
+/* Heading Styles */
 h1, h2 {
-    color: var(--white);
-    text-align: center;
-    margin-bottom: 20px;
+    color: var(--white); /* White color for headings */
+    text-align: center; /* Centers text */
+    margin-bottom: 20px; /* Adds spacing below headings */
 }
 
 /* File List Styles */
 ul {
-    list-style-type: none;
+    list-style-type: none; /* Removes default list bullets */
     padding: 0;
     margin: 0; /* Prevents overlap with other content */
 }
 
 ul li {
-    margin: 5px 0;
+    margin: 5px 0; /* Adds margin between list items */
 }
 
 ul li a {
-    text-decoration: none;
-    color: var(--button-bg);
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    color: var(--button-bg); /* Link color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
     display: block; /* Makes each link occupy full line width */
 }
 
 ul li a:hover {
-    color: var(--button-hover-bg);
+    color: var(--button-hover-bg); /* Changes link color on hover */
 }
 
 /* File Content Styles */
 .file-content {
-    white-space: pre-wrap;
-    background-color: #eef2f5;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 20px 0;
-    overflow-x: auto;
-    font-family: monospace;
-    font-size: 14px;
-    color: #555;
+    white-space: pre-wrap; /* Maintains formatting for text */
+    background-color: #eef2f5; /* Light background for file content */
+    padding: 15px; /* Padding inside the content box */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Adds margin between content boxes */
+    overflow-x: auto; /* Enables horizontal scrolling for long lines */
+    font-family: monospace; /* Monospaced font for code-like content */
+    font-size: 14px; /* Smaller font size */
+    color: #555; /* Text color */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 /* Logout Button */
 .logout-button {
-    background-color: var(--error-color);
-    color: var(--white);
-    font-size: 14px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
+    background-color: var(--error-color); /* Red background for logout */
+    color: var(--white); /* White text color */
+    font-size: 14px; /* Font size */
+    padding: 10px 15px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display: inline-block; /* Makes button inline */
 }
 
 .logout-button:hover {
-    background-color: #a71d2a;
+    background-color: #a71d2a; /* Darker red on hover */
 }
 
 /* Buttons */
 button {
-    display: inline-block;
-    margin: 10px 5px;
-    padding: 10px 20px;
-    background-color: var(--button-bg);
-    color: var(--white);
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: auto;
+    display: inline-block; /* Inline button */
+    margin: 10px 5px; /* Spacing between buttons */
+    padding: 10px 20px; /* Button padding */
+    background-color: var(--button-bg); /* Button background */
+    color: var(--white); /* White text color */
+    font-size: 14px; /* Font size */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: auto; /* Auto width */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 button:hover {
-    background-color: var(--button-hover-bg);
+    background-color: var(--button-hover-bg); /* Hover color change */
 }
 
+/* Upload Section */
 .upload-section {
     display: flex; /* Arrange elements horizontally */
     align-items: center; /* Vertically align elements */
@@ -107,51 +109,51 @@ button:hover {
 }
 
 .upload-section input[type="file"] {
-    flex: 1; /* Allow the input field to take available space */
-    padding: 10px; /* Add padding for better alignment */
-    font-size: 14px; /* Adjust font size for consistency */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    border: 1px solid #ccc; /* Optional: Add a border */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    background-color: #eef2f5; /* Optional: Match styles with the form */
+    flex: 1; /* Input takes available space */
+    padding: 10px; /* Padding for alignment */
+    font-size: 14px; /* Consistent font size */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border: 1px solid #ccc; /* Optional border for input */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #eef2f5; /* Background color */
 }
 
 .upload-section button {
-    flex-shrink: 0; /* Prevent the button from shrinking */
-    padding: 10px 15px; /* Ensure padding matches the input field */
-    font-size: 14px; /* Match font size */
-    height: 100%; /* Ensure the button matches the height of the input */
-    box-sizing: border-box; /* Include padding in the height calculation */
+    flex-shrink: 0; /* Prevent shrinking */
+    padding: 10px 15px; /* Matching padding */
+    font-size: 14px; /* Font size */
+    height: 100%; /* Matching button height */
+    box-sizing: border-box; /* Include padding in height calculation */
 }
 
 /* Notifications */
 .notification {
-    margin-top: 20px;
-    padding: 10px;
-    color: var(--white);
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    animation: fadeOut 3s forwards;
+    margin-top: 20px; /* Margin above the notification */
+    padding: 10px; /* Padding inside the notification */
+    color: var(--white); /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Font size */
+    animation: fadeOut 3s forwards; /* Fade out animation */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .notification.success {
-    background-color: var(--success-color);
+    background-color: var(--success-color); /* Green background for success */
 }
 
 .notification.error {
-    background-color: var(--error-color);
+    background-color: var(--error-color); /* Red background for errors */
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .view-files-container {
-        padding: 15px;
+        padding: 15px; /* Adjusts padding for small screens */
     }
 
     button {
-        width: 100%; /* Ensures buttons take full width */
+        width: 100%; /* Ensures buttons take full width on small screens */
     }
 
     .file-content {
@@ -159,6 +161,7 @@ button:hover {
     }
 }
 
+/* Fade Out Animation */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -173,62 +176,62 @@ button:hover {
 
 /* Navbar Container */
 .navbar {
-    display: flex;
+    display: flex; /* Flexbox for navbar */
     justify-content: space-between; /* Distribute space between logo and links */
     align-items: center; /* Vertically align items */
-    padding: 10px 20px;
-    background-color: #16213e;
+    padding: 10px 20px; /* Padding around navbar items */
+    background-color: #16213e; /* Navbar background */
 }
 
 /* Navbar Links */
 .nav-links {
-    display: flex;
-    list-style: none;
+    display: flex; /* Flexbox for navbar links */
+    list-style: none; /* Removes default list style */
     margin: 0;
     padding: 0;
 }
 
 .nav-links li {
-    margin: 0 0px; /* Space between links */
+    margin: 0 0px; /* No space between links */
 }
 
 /* Consistent styles for links and buttons in navbar */
 .nav-links a,
 .nav-links button {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 16px;
-    background: none;
-    border: none;
-    padding: 10px 20px; /* Ensure consistent padding */
-    line-height: 1; /* Ensure same line height */
-    cursor: pointer;
-    display: flex; /* Use flex to align content */
-    align-items: center; /* Vertically align content */
-    height: 40px; /* Ensure all items have equal height */
+    text-decoration: none; /* Remove underline */
+    color: var(--white); /* White text color */
+    font-size: 16px; /* Font size */
+    background: none; /* No background */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around links/buttons */
+    line-height: 1; /* Consistent line height */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for aligning content */
+    align-items: center; /* Vertically center items */
+    height: 40px; /* Consistent height */
 }
 
-/* On hover, change color for both links and buttons */
+/* Hover effect for links and buttons */
 .nav-links a:hover,
 .nav-links button:hover {
-    color: var(--button-hover-bg);
+    color: var(--button-hover-bg); /* Change color on hover */
 }
 
-/* Specific styles for the logout button */
+/* Specific styles for the logout button in navbar */
 .nav-links .logout-button {
-    padding: 10px 20px; /* Consistent padding with other buttons */
-    background-color: var(--error-color);
-    color: var(--white);
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    height: 40px; /* Ensure the logout button aligns with other buttons */
+    padding: 10px 20px; /* Consistent padding */
+    background-color: var(--error-color); /* Red background */
+    color: var(--white); /* White text */
+    font-size: 14px; /* Font size */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Align content */
+    height: 40px; /* Ensure equal height with other buttons */
 }
 
 .nav-links .logout-button:hover {
-    background-color: #a71d2a;
+    background-color: #a71d2a; /* Darker red on hover */
 }
